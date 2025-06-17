@@ -116,20 +116,3 @@ No need to worry about extra downloads! When you run `app.py` for the very first
 3.  Hit Summarize!: Ready? Just click that tempting "Summarize" button! 🎯
 4.  *See the Magic!: Watch as your summary magically appears in the right-hand box! ✨
 5.  Copy & Share!: Like what you see? Click "Copy Summary" (it appears after summarizing!) to grab your new text for anything you need! 📥
-
-## 🐛 Troubleshooting (Don't Worry, We Got You!)
-
-Ran into a snag? No problem! Here are the common fixes:
-
-*"LexRank summarizer requires NumPy" Error:
-    *The Fix: This is the #1 culprit! 🕵️‍♀️ Don't panic. Simply stop your Flask server (go to the terminal and press `CTRL + C` a few times), then run `pip install numpy` (make sure `(venv)` is still showing!), and finally, restart your server with `python app.py`. Problem solved! ✅
-"NLTK data not found" or weird `punkt` / `stopwords` errors:
-    *The Fix: Your app needs to download some linguistic data. Ensure your computer has an active internet connection when you first run `python app.py`. The app will try to fetch them automatically. If issues persist, double-check your terminal output for any specific NLTK download failures. 🌐
-*"Summarizer not working / Output is exactly the same as input":
-    Possible Fixes (Check these!):
-        Did you check for the NumPy error in your terminal? (It's sneaky!)
-        Is your input text actually long enough to summarize? Very short sentences might not change. 🤷‍♀️
-        Is your slider set to "Long" for a super short input? Try dragging it towards "Short" to see a bigger difference! 📉
-        Open your browser's developer tools (usually by pressing `F12`), go to the `Network` tab, and click the `POST /api/summarize` request after hitting summarize. Does it show any errors there? The `Response` tab might give clues! 🕵️‍♂️
-
----
